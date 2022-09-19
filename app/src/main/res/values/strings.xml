@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ARM_Market_Firebase</string>
+    <string name="future_devs">Будущие поставки</string>
+    <string name="past_devs">Прошлые поставки</string>
+
+    <string name="choose">Выберите тип доставляемой продукции</string>
+    <string name="wood">Доски</string>
+    <string name="cement">Цемент</string>
+    <string name="brick">Кирпич</string>
+    <string name="stone">Камень</string>
+    <string name="back">Назад</string>
+
+    <string name="radio_btn1">Прошлые поставки</string>
+    <string name="radio_btn2">Будущие поставки</string>
+
+    <string name="title_activity_prod_type">ProdType</string>
+
+    <string name="productListLogo">Список поставок</string>
+    <string name="progress_bar_text">Степень заполненности склада</string>
+
+    <string-array name="productType">
+        <item>Доски</item>
+        <item>Цемент</item>
+        <item>Кирпич</item>
+        <item>Камень</item>
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "462837284223",
+    "project_id": "arm-market-firebase",
+    "storage_bucket": "arm-market-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462837284223:android:b314a9f2c11a19aef26e4a",
+        "android_client_info": {
+          "package_name": "com.example.arm_market_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462837284223-s1qfanqh9hfphq120eqlint2t29e1f7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsG5pBRL_2xypOeE_7ab3HHN5fhRgloHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462837284223-s1qfanqh9hfphq120eqlint2t29e1f7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

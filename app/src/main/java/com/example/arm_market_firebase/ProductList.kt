@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.arm_market_firebase.databinding.ActivityProductListBinding
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -25,12 +24,15 @@ class ProductList : AppCompatActivity() {
         setContentView(R.layout.activity_product_list)
 
         val backBtn = findViewById<Button>(R.id.productListBack)
+
         val db = Firebase.firestore
+
         val productStatus = intent.getStringExtra("period").toString()
         val name = intent.getStringExtra("prodType").toString()
+
         val recyclerView: RecyclerView = findViewById(R.id.productListRV)
 
-        Log.i(TAG, "AAaaaaaaaaaaaaaaaaaaa")
+        val elementList = mutableListOf<Map<String, Any>>()
 
         Log.i(TAG, "productStatus = $productStatus and name = $name")
 
@@ -39,14 +41,16 @@ class ProductList : AppCompatActivity() {
             .addOnSuccessListener { result ->
                 for (document in result) {
                     Log.d(TAG, "${document.id} => ${document.data}")
+                    elementList.add(document.data)
                 }
+
             }
             .addOnFailureListener { exception ->
                 Log.w(TAG, "Error getting documents.", exception)
             }
 
-        //init()
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = ProductAdapter(elementList)
 
         backBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -54,13 +58,5 @@ class ProductList : AppCompatActivity() {
         }
 
     }
-
-//    private fun init(){
-//        binding.apply {
-//            Log.i(TAG, "DDdddddddddddddddddd")
-//            productListRV.layoutManager = LinearLayoutManager(this@ProductList)
-//            productListRV.adapter = adapter
-//        }
-//    }
 
 }
